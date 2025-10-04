@@ -4,11 +4,11 @@
 // accessing the application at "http://localhost:8888/php-todo-ex/", then
 // BASE_URL should be "/php-todo-ex/". If you are accessing the application at
 // "http://localhost:8888", then BASE_URL should be "/".
-define('BASE_URL', '/');
+define('BASE_URL', 'http://localhost/php-todo-ex-ARI/');
 
 // Database connection parameters.
 define('DB_USER', 'todolist');
-define('DB_PASS', 'change-me-now');
+define('DB_PASS', 'ari');
 define('DB_NAME', 'todolist');
 define('DB_HOST', '127.0.0.1');
 define('DB_PORT', '3306');
@@ -43,7 +43,7 @@ if (isset($_POST['action'])) {
 
       $id = $_POST['id'];
       if(is_numeric($id)) {
-        $updateQuery = ''; // IMPLEMENT ME
+        $updateQuery = 'UPDATE todo VALUES SET done = 1 WHERE done = 0 OR UPDATE todo VALUES SET done = 0 WHERE done = 1'; // IMPLEMENT ME
         if(!$db->query($updateQuery)) {
           die(print_r($db->errorInfo(), true));
         }
