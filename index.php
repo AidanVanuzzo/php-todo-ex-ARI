@@ -4,7 +4,7 @@
 // accessing the application at "http://localhost:8888/php-todo-ex/", then
 // BASE_URL should be "/php-todo-ex/". If you are accessing the application at
 // "http://localhost:8888", then BASE_URL should be "/".
-define('BASE_URL', '/');
+define('BASE_URL', '/php-todo-ex-ARI/');
 
 // Database connection parameters.
 define('DB_USER', 'todolist');
@@ -59,7 +59,7 @@ if (isset($_POST['action'])) {
 
       $id = $_POST['id'];
       if(is_numeric($id)) {
-        $deleteQuery = 'DELETE FROM todo WHERE id = '.$id;
+        $deleteQuery = "DELETE FROM todo WHERE id = .$id";
         if(!$db->query($deleteQuery)) {
           die(print_r($db->errorInfo(), true));
         }
