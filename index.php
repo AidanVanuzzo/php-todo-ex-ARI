@@ -8,7 +8,7 @@ define('BASE_URL', 'http://localhost/php-todo-ex-ARI/');
 
 // Database connection parameters.
 define('DB_USER', 'todolist');
-define('DB_PASS', 'ari');
+define('DB_PASS', 'survivant');
 define('DB_NAME', 'todolist');
 define('DB_HOST', '127.0.0.1');
 define('DB_PORT', '3306');
